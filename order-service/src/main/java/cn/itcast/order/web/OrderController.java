@@ -32,7 +32,9 @@ public class OrderController {
         Order order=orderMapper.findById(orderId);
         //3.基于order的user ID发起http请求,利用restTemplate.getForObject发送get请求,并返回json数据回来
         //硬编码url地址
-       String url ="http://localhost:8081/user/"+order.getUserId();
+       //String url ="http://localhost:8081/user/"+order.getUserId();
+
+       String url ="http://userservice/user/1"+order.getUserId();
 
         User user = restTemplate.getForObject(url, User.class);//User.class表示将返回的json数据封装成User类型
         // 根据id查询订单并返回

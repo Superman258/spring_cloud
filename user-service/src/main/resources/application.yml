@@ -7,7 +7,7 @@ spring:
     password: root
     driver-class-name: com.mysql.jdbc.Driver
   application:
-    name: usersvice
+    name: userservice
 mybatis:
   type-aliases-package: cn.itcast.user.pojo
   configuration:
